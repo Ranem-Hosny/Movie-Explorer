@@ -1,0 +1,69 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "The Godfather",
+      "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+      "image": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UY1982_.WebP",
+      "rating": 4,
+      "genres": [
+        "Crime",
+        "Drama"
+      ],
+      "inTheaters": false
+    },
+    {
+      "id": 2,
+      "name": "The Shawshank Redemption",
+      "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+      "image": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1200_.WebP",
+      "rating": 4,
+      "genres": [
+        "Drama"
+      ],
+      "inTheaters": true
+    },
+    {
+      "id": "19ddaa88-f2f3-44b3-b7a8-54feff37c79f",
+      "name": "Beast",
+      "description": "في إطار من المغامرات والرعب، يجد أب وابنتيه المراهقتين أنفسهم مطاردين من قبل أسد مفترس عازم على إثبات أن غابات السافانا لا تمتلك أي مخلوق آخر بشراسته.",
+      "image": "https://i.ibb.co/bgr02Cbz/unnamed.webp",
+      "genres": [
+        "Action"
+      ],
+      "inTheaters": true,
+      "rating": 4
+    },
+    {
+      "id": "663ca2b3-42a9-49d1-aeeb-4f5ad279a342",
+      "name": "Alpha",
+      "description": "A young man struggles to return home after being separated from his tribe during a buffalo hunt. He finds a similarly lost wolf companion and starts a ...\n",
+      "image": "https://i.ibb.co/6RckWybg/images.jpg",
+      "genres": [
+        "Drama",
+        "Action"
+      ],
+      "inTheaters": true,
+      "rating": 2
+    },
+    {
+      "id": "9e57202a-624e-4f8b-b725-3fdd79e2cb50",
+      "name": "venom ",
+      "description": "A failed reporter is bonded to an alien entity, one of many symbiotes who have invaded Earth. But the being takes a liking to Earth and decides to protect it.\n",
+      "image": "https://i.ibb.co/B5xVSDvk/download.jpg",
+      "genres": [
+        "Action"
+      ],
+      "inTheaters": true,
+      "rating": 2
+    },
+    {
+      "id": "2823cc8a-d3cc-44b5-9e7f-8698b20a7eb6",
+      "name": "Aquaman",
+      "description": "no description",
+      "image": "https://i.ibb.co/4g9tNYQJ/images.webp",
+      "genres": [],
+      "inTheaters": true
+    }
+  ]
+}
