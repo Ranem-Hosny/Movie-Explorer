@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 export async function getMovies() {
   try {
     const response = await axios.get("/movies.json");
-    return response.data;
+    return response.data.items;
   } catch (err) {
     console.log(err);
   }
