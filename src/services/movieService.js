@@ -14,7 +14,7 @@ export async function getMovies() {
 //Add
 export async function addMovie(movie) {
   const { id, name, description, image, rating, genres, inTheaters } = movie;
-  
+
   try {
     const response = await axios.post(API_URL, {
       id: id || uuidv4(),
@@ -34,9 +34,7 @@ export async function addMovie(movie) {
 //delete
 export async function deleteMovie(movieId) {
   try {
-    const response = await axios.delete(
-      `${API_URL}/${movieId}`
-    );
+    const response = await axios.delete(`${API_URL}/${movieId}`);
     return response.data;
   } catch (err) {
     console.log(err);
@@ -46,10 +44,7 @@ export async function deleteMovie(movieId) {
 //update
 export async function updateMovie(movieId, updatedMovie) {
   try {
-    const response = await axios.put(
-      `${API_URL}/${movieId}`,
-      updatedMovie
-    );
+    const response = await axios.put(`${API_URL}/${movieId}`, updatedMovie);
     return response.data;
   } catch (err) {
     console.log(err);
