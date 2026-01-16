@@ -35,7 +35,7 @@ export async function addMovie(movie) {
 export async function deleteMovie(movieId) {
   try {
     const response = await axios.delete(
-      `API_URL/${movieId}`
+      `${API_URL}/${movieId}`
     );
     return response.data;
   } catch (err) {
@@ -47,7 +47,7 @@ export async function deleteMovie(movieId) {
 export async function updateMovie(movieId, updatedMovie) {
   try {
     const response = await axios.patch(
-      `API_URL/${movieId}`,
+      `${API_URL}/${movieId}`,
       updatedMovie
     );
     return response.data;
