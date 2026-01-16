@@ -1,11 +1,11 @@
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
-
+const API_URL = "https://6969ae533a2b2151f845f5f6.mockapi.io/items/items";
 //get
 export async function getMovies() {
   try {
-    const response = await axios.get("/movies.json");
-    return response.data.items;
+    const response = await axios.get(API_URL);
+    return response.data;
   } catch (err) {
     console.log(err);
   }
@@ -16,7 +16,7 @@ export async function addMovie(movie) {
   const { id, name, description, image, rating, genres, inTheaters } = movie;
   
   try {
-    const response = await axios.post("/movies.json", {
+    const response = await axios.post(API_URL, {
       id: id || uuidv4(),
       name,
       description,
@@ -35,7 +35,7 @@ export async function addMovie(movie) {
 export async function deleteMovie(movieId) {
   try {
     const response = await axios.delete(
-      `/movies.json/${movieId}`
+      `API_URL/${movieId}`
     );
     return response.data;
   } catch (err) {
@@ -47,7 +47,7 @@ export async function deleteMovie(movieId) {
 export async function updateMovie(movieId, updatedMovie) {
   try {
     const response = await axios.patch(
-      `/movies.json/${movieId}`,
+      `API_URL/${movieId}`,
       updatedMovie
     );
     return response.data;
