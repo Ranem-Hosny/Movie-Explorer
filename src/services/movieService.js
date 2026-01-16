@@ -5,7 +5,7 @@ const API_URL = "https://6969ae533a2b2151f845f5f6.mockapi.io/items/items";
 export async function getMovies() {
   try {
     const response = await axios.get(API_URL);
-    return response.data;
+    return response.data || [];
   } catch (err) {
     console.log(err);
   }
@@ -46,7 +46,7 @@ export async function deleteMovie(movieId) {
 //update
 export async function updateMovie(movieId, updatedMovie) {
   try {
-    const response = await axios.patch(
+    const response = await axios.put(
       `${API_URL}/${movieId}`,
       updatedMovie
     );
