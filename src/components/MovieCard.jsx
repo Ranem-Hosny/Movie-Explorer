@@ -94,7 +94,7 @@ export default function MovieCard({ movie }) {
             {movie.name}
           </Typography>
           <Box sx={{ display: "flex", gap: 0.5, my: 0.5 }}>
-            {movie.genres.map((genre) => (
+            {movie.genres?.map((genre) => (
               <Chip
                 key={genre}
                 label={genre}

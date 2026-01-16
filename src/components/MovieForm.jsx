@@ -191,7 +191,7 @@ export default function MovieForm() {
                 fullWidth
                 size="small"
               >
-                {genresoptions.map((genre) => (
+                {genresoptions?.map((genre) => (
                   <MenuItem key={genre} value={genre}>
                     {genre}
                   </MenuItem>

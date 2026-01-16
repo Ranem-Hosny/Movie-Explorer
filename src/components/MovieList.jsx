@@ -48,7 +48,7 @@ export default function MovieList() {
               width: "95%",
             }}
           >
-            {movies.map((movie) => (
+            {movies?.map((movie) => (
               <Box
                 key={movie.id}
                 sx={{

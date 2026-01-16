@@ -6,7 +6,7 @@ export default function Navbar() {
   const { movies, setShowForm, setMood, setUpdatedMovie, handleRemoveRating } =
     useMovies();
 
-  const mapping = movies.map((movie) => movie.rating || 0);
+  const mapping = movies?.map((movie) => movie.rating || 0);
   const sum = mapping.reduce((acc, curr) => {
     return acc + curr;
   }, 0);
