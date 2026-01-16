@@ -67,6 +67,15 @@ export default function MoviesProvider({ children }) {
     setMovies(removedRate);
   };
 
+  const handleFilterMovieByInTheaters = ()=>{
+
+    const filterMovies = movies.filter((movie)=>movie.inTheaters === true);
+    console.log(filterMovies)
+
+    setMovies(filterMovies)
+
+  }
+
   return (
     <MovieContext.Provider
       value={{
@@ -85,6 +94,7 @@ export default function MoviesProvider({ children }) {
         handleRatingChange,
         handleRemoveRating,
         handleUpdateMovie,
+        handleFilterMovieByInTheaters
       }}
     >
       {children}

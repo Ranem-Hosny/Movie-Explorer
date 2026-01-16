@@ -2,9 +2,14 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import { useMovies } from "../contexts/MoviesProvider";
 
 export default function Navbar() {
-  
-  const { movies, setShowForm, setMood, setUpdatedMovie, handleRemoveRating } =
-    useMovies();
+  const {
+    movies,
+    setShowForm,
+    setMood,
+    setUpdatedMovie,
+    handleRemoveRating,
+    handleFilterMovieByInTheaters,
+  } = useMovies();
 
   const mapping = movies?.map((movie) => movie.rating || 0);
   const sum = mapping.reduce((acc, curr) => {
@@ -42,6 +47,8 @@ export default function Navbar() {
           gap={2}
           justifyContent="center"
           alignItems="center"
+          flexWrap='wrap'
+
         >
           <Button
             onClick={() => handleRemoveRating()}
@@ -60,6 +67,15 @@ export default function Navbar() {
             }}
           >
             Add Movie
+          </Button>
+          <Button
+            variant="contained"
+            sx={{ backgroundColor: "#36b2d1" }}
+            onClick={
+              handleFilterMovieByInTheaters
+            }
+          >
+            In Theaters
           </Button>
         </Grid>
       </Grid>

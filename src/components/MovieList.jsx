@@ -33,8 +33,9 @@ export default function MovieList() {
         sx={{
           display: "flex",
           justifyContent: "center",
-          mt: "30px",
-          minHeight: "calc(100vh - 80px)",
+          alignItems: "flex-start",
+          pt: "3px",
+          minHeight: "83vh",
         }}
       >
         {movies && movies.length > 0 ? (
@@ -55,6 +56,7 @@ export default function MovieList() {
                   flex: "1 1 clamp(250px, 33%, 300px)",
                   display: "flex",
                   justifyContent: "center",
+                  marginTop:'15px'
                 }}
               >
                 <MovieCard movie={movie} />
@@ -62,9 +64,11 @@ export default function MovieList() {
             ))}
           </Box>
         ) : (
-          <Alert variant="filled" severity="info">
-            No movies to watch - Add your favorite one!
-          </Alert>
+          <Box sx={{ margin: "auto" }}>
+            <Alert variant="filled" severity="info">
+              No movies to watch - Add your favorite one!
+            </Alert>
+          </Box>
         )}
       </Box>
     </>
