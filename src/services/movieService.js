@@ -1,6 +1,7 @@
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 const API_URL = "https://6969ae533a2b2151f845f5f6.mockapi.io/items/items";
+
 //get
 export async function getMovies() {
   try {

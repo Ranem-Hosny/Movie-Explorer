@@ -6,6 +6,7 @@ import {
   updateMovie,
 } from "../services/movieService";
 import { toast } from "react-toastify";
+import axios from "axios";
 const MovieContext = createContext();
 
 export default function MoviesProvider({ children }) {
@@ -58,23 +59,33 @@ export default function MoviesProvider({ children }) {
     }
   };
 
-  const handleRemoveRating = () => {
-    const removedRate = movies.map((movie) => ({
-      ...movie,
-      rating: 0,
-    }));
+  const handleRemoveRating = async () => {
+    try {
+      const removedRate = movies.map((movie) => ({
+        ...movie,
+        rating: 0,
+      }));
 
-    setMovies(removedRate);
+      setMovies(removedRate);
+
+      const updateRequests = movies.map((movie) =>
+        axios.put(
+          `https://6969ae533a2b2151f845f5f6.mockapi.io/items/items/${movie.id}`,
+          { ...movie, rating: 0 }
+        )
+      );
+      await Promise.all(updateRequests);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
-  const handleFilterMovieByInTheaters = ()=>{
+  const handleFilterMovieByInTheaters = () => {
+    const filterMovies = movies.filter((movie) => movie.inTheaters === true);
+    console.log(filterMovies);
 
-    const filterMovies = movies.filter((movie)=>movie.inTheaters === true);
-    console.log(filterMovies)
-
-    setMovies(filterMovies)
-
-  }
+    setMovies(filterMovies);
+  };
 
   return (
     <MovieContext.Provider
@@ -94,7 +105,7 @@ export default function MoviesProvider({ children }) {
         handleRatingChange,
         handleRemoveRating,
         handleUpdateMovie,
-        handleFilterMovieByInTheaters
+        handleFilterMovieByInTheaters,
       }}
     >
       {children}
